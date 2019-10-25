@@ -15,9 +15,9 @@
 
   <!-- 数据库链接URL、用户名、密码 -->
   <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-    connectionURL="jdbc:mysql://localhost:3306/jt"
+    connectionURL="jdbc:mysql://60.205.191.72/syy_dev"
     userId="root"
-    password="root">
+    password="Zh123456!">
   </jdbcConnection>
 
   <!--
@@ -33,7 +33,7 @@
   也可以使用“MAVEN”来自动生成，这样生成的代码会在target/generatord-source目录下
   -->
   <!--<javaModelGenerator targetPackage="com.joey.mybaties.test.pojo" targetProject="MAVEN">-->
-  <javaModelGenerator targetPackage="cn.demo.pojo" targetProject="./src/main/java">
+  <javaModelGenerator targetPackage="com.sinochem.syrici.entrust.model.po" targetProject="./src/main/java">
     <property name="enableSubPackages" value="true"/>
     <!-- 从数据库返回的值被清理前后的空格  -->
     <property name="trimStrings" value="true" />
@@ -45,14 +45,14 @@
   </sqlMapGenerator>
 
   <!-- 对应的Mapper接口类文件 -->
-  <javaClientGenerator type="XMLMAPPER" targetPackage="cn.demo.dao" targetProject="./src/main/java">
+  <javaClientGenerator type="XMLMAPPER" targetPackage="com.sinochem.syrici.entrust.dao.mapper" targetProject="./src/main/java">
     <property name="enableSubPackages" value="true"/>
   </javaClientGenerator>
 
 
   <!--生成对应表及类名-->
   <!--<table tableName="stocktradeinfo" domainObjectName="StockTradeInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
-  <table tableName="tb_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+  <table tableName="ent_business_unit" domainObjectName="EntBusinessUnit" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 
 </context>
 </generatorConfiguration>
